@@ -17,7 +17,6 @@ export default function ClientComponent({
 
   // optional: use configId from environment variable
   const configId = process.env['NEXT_PUBLIC_HUME_CONFIG_ID'];
-  
   return (
     <div
       className={

@@ -10,11 +10,10 @@ const Messages = forwardRef<
   Record<never, never>
 >(function Messages(_, ref) {
   const { messages } = useVoice();
-
   return (
     <motion.div
       layoutScroll
-      className={"grow rounded-md overflow-auto p-4"}
+      className={"grow rounded-md overflow-auto p-4 bg-black"}
       ref={ref}
     >
       <motion.div
@@ -32,6 +31,7 @@ const Messages = forwardRef<
                   className={cn(
                     "w-[80%]",
                     "bg-card",
+                    "bg-zinc-900",
                     "border border-border rounded",
                     msg.type === "user_message" ? "ml-auto" : "",
                   )}
@@ -56,7 +56,7 @@ const Messages = forwardRef<
                     {msg.message.role}
                   </div>
                   <div className={"pb-3 px-3"}>{msg.message.content}</div>
-                  <Expressions values={msg.models.prosody?.scores} />
+                  {/* <Expressions values={msg.models.prosody?.scores} /> */}
                 </motion.div>
               );
             }
