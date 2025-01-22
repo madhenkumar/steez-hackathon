@@ -13,7 +13,7 @@ const Messages = forwardRef<
   return (
     <motion.div
       layoutScroll
-      className={"grow rounded-md overflow-auto p-4 bg-black"}
+      className={"grow rounded-md overflow-auto p-4"}
       ref={ref}
     >
       <motion.div
@@ -30,8 +30,9 @@ const Messages = forwardRef<
                   key={msg.type + index}
                   className={cn(
                     "w-[80%]",
-                    "bg-card",
-                    "bg-zinc-900",
+                    msg.type === "user_message" 
+                      ? "bg-rose-100/95" 
+                      : "bg-teal-100/95",
                     "border border-border rounded",
                     msg.type === "user_message" ? "ml-auto" : "",
                   )}
@@ -50,13 +51,13 @@ const Messages = forwardRef<
                 >
                   <div
                     className={cn(
-                      "text-xs capitalize font-medium leading-none opacity-50 pt-4 px-3",
+                      "text-xs text-black capitalize font-medium leading-none opacity-50 pt-4 px-3",
                     )}
                   >
                     {msg.message.role}
                   </div>
-                  <div className={"pb-3 px-3"}>{msg.message.content}</div>
-                  {/* <Expressions values={msg.models.prosody?.scores} /> */}
+                  <div className={"pb-3 px-3 text-black"}>{msg.message.content}</div>
+                  <Expressions values={msg.models.prosody?.scores} />
                 </motion.div>
               );
             }

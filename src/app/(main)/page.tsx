@@ -18,20 +18,13 @@
 
 // export default page
 
-import Link from "next/link";
-import { getHumeAccessToken } from "~/utils/getHumeAccessToken";
-import Chat from "../_components/Chat";
+import { redirect } from 'next/navigation'
 
 
-export default async function Home() {
-  const accessToken = await getHumeAccessToken();
-
-  if (!accessToken) {
-    throw new Error();
-  }
+export default function Home() {
+  redirect('/home');
   return (
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-              <Chat accessToken={accessToken} />
-      </main>
+    <main>
+hi    </main>
   );
 }

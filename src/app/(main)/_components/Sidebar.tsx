@@ -36,7 +36,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader>
         <div className="px-4 py-3">
-          <h1 className="text-xl font-bold">steez</h1>
+          <h1 className="text-xl font-bold">Maya Therapy</h1>
         </div>
       </SidebarHeader>
       <SidebarContent>

@@ -15,7 +15,7 @@ export default function Controls() {
       className={
         cn(
           "fixed bottom-0 left-0 w-full p-4 flex items-center justify-center",
-          "bg-zinc-900",
+          "bg-teal-50/95 backdrop-blur supports-[backdrop-filter]:bg-teal-50/60",
         )
       }
     >
@@ -35,7 +35,7 @@ export default function Controls() {
               opacity: 0,
             }}
             className={
-              "p-4 bg-zinc-900 border border-border rounded-lg shadow-sm flex items-center gap-4"
+              "p-4 bg-teal-300/80 border border-border rounded-lg shadow-sm flex items-center gap-4"
             }
           >
             <Toggle
@@ -60,7 +60,7 @@ export default function Controls() {
             </div>
 
             <Button
-              className={"flex items-center gap-1"}
+              className={"flex items-center gap-1 bg-teal-500"}
               onClick={() => {
                 disconnect();
               }}

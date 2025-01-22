@@ -23,7 +23,7 @@ export default function Expressions({
   return (
     <div
       className={
-        "text-xs p-3 w-full border-t border-border flex flex-col md:flex-row gap-3"
+        "text-xs text-black p-3 w-full border-t border-border flex flex-col md:flex-row gap-3"
       }
     >
       {top3.map(([key, value]) => (
