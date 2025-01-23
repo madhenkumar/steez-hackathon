@@ -6,6 +6,7 @@ import { ComponentRef, useRef } from "react";
 import Controls from "./Controls";
 import Messages from "./Messages";
 import StartCall from "./StartCall";
+import CreateReport from "./CreateReport";
 
 export default function ClientComponent({
   accessToken,
@@ -46,6 +47,8 @@ export default function ClientComponent({
         <Messages ref={ref} />
         <Controls />
         <StartCall />
+        <CreateReport />
+
       </VoiceProvider>
     </div>
   );
