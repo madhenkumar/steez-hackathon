@@ -24,7 +24,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex min-h-screen py-4 px-2 md:p-20 justify-center">
+        <main className="min-h-screen">
           <AnamContextProvider sessionToken={sessionToken} apiKey={API_KEY}>
             {children}
           </AnamContextProvider>
