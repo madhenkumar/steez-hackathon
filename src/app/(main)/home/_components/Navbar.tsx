@@ -16,7 +16,7 @@ export function Navbar() {
       <div className="container flex h-16 items-center">
         <div className="ml-8 mr-8 flex items-center space-x-2">
           {/* <Heart className="h-6 w-6 text-teal-600" /> */}
-          <span className="text-2xl font-bold">Maya Therapy</span>
+          <span className="text-2xl font-bold text-black">Maya Therapy</span>
         </div>
 
         <NavigationMenu className="hidden md:flex">
