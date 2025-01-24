@@ -51,15 +51,17 @@ export default function TherapyLanding() {
             </ul>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link href="/chat">
-                <Button size="lg" className="bg-teal-600 hover:bg-teal-700">
+                <Button size={"lg"} className="bg-teal-600 hover:bg-teal-700">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Start Session
                 </Button>
               </Link>
-              <Button size="lg" variant="outline">
-                <Calendar className="mr-2 h-5 w-5" />
-                Schedule Call
-              </Button>
+              <Link href="/persona2">
+                <Button size="lg" variant="outline">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Talk to Maya
+                </Button>
+              </Link>
             </div>
           </div>
 
